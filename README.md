@@ -1,4 +1,5 @@
 # python-rest-api-example
+
 REST API example developed on Python
 
 Small POC of subscribing to Salesforce REST API using Python.
@@ -12,6 +13,7 @@ OpenSSL
 Access to a Salesforce Org with a Platform Event created
 
 # Setup
+
 Note: The following (at this time) has been tested on a macOS machine. I can't vouch for the Certificate Generation section working on Linux or Windows environments running WSL.
 
 ## Certificate Generation
@@ -25,6 +27,8 @@ Connected App Setup
 Example Connected App Setup
 
 ## Screen shot of Connected App Setup
+
+![Example Screenshot](/assets/connected-app-screenshot.png)
 
 Set up Connected App with the .crt that was generated via the shell script
 Navigate to Setup > Manage Connected Apps > Your newly-created App
