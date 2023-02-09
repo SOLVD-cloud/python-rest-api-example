@@ -1,0 +1,9 @@
+# Certificate relevant files
+scripts/generate-certificate.sh
+cert/private-key.pem
+cert/certificate.crt
+cert/cert-request.csr
+cert/secrets.json
+
+# other Python specific files
+__pycache__
