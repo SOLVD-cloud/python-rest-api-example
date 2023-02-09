@@ -1,10 +1,10 @@
 # this function will authenticate with Salesforce and authorize a user
 # the return for this function is the authentication token
+import requests
+import jwt
+import time
 
 def authorize_salesforce(client_id, username):
-    import requests
-    import jwt
-    import time
 
     # opening the private key file
     with open("./cert/private-key.pem") as fd:
