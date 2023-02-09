@@ -1,25 +1,20 @@
 # this function will authenticate with Salesforce and authorize a user
 # the return for this function is the authentication token
 
-def Authorize_Salesforce():
-    import json
+def authorize_salesforce(client_id, username):
     import requests
     import jwt
     import time
-
-    # loading in secrets file that contains username, password, etc.
-    file = open("./cert/secrets.json")
-    secrets = json.load(file)
 
     # opening the private key file
     with open("./cert/private-key.pem") as fd:
         private_key = fd.read()
 
     payload = {
-        "iss": secrets["CLIENT_ID"],
+        "iss": client_id,
         "exp": int(time.time()) + 300,
         "aud": "https://login.salesforce.com",
-        "sub": secrets["USERNAME"],
+        "sub": username,
     }
 
     encoded_token = jwt.encode(
